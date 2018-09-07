@@ -1,7 +1,7 @@
 public class Monstre extends Personnage{
 
-    public Monstre(String nom, int vie){
-        super(nom, vie);
+    public Monstre(String nom_monstre, int vie){
+        super(nom_monstre, vie);
     }
 
     public void attaque(Personnage p){
