@@ -1,6 +1,6 @@
 public class Sorcier extends Personnage {
 
-    private double pouvoir = Math.random();
+    protected double pouvoir = Math.random();
 
     public Sorcier(String nom_sorcier, int vie){
         super(nom_sorcier, vie);
@@ -8,7 +8,7 @@ public class Sorcier extends Personnage {
 
     public void attaque(Personnage p){
         if (!p.mort()){
-            this.addVie(p.subitCharme((int)(pouvoir*pdv)));
+            this.addVie(p.subitCharme((int)(this.getPouvoir()*pdv)));
         }
     }
 
@@ -18,7 +18,11 @@ public class Sorcier extends Personnage {
 
     public void riposte(Personnage p){
         if (!this.mort()) {
-            p.addVie(-(int)(pouvoir*pdv));
+            p.addVie(-(int)(this.getPouvoir()*pdv));
         }
+    }
+
+    public double getPouvoir(){
+        return pouvoir;
     }
 }
