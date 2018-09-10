@@ -1,4 +1,4 @@
 public interface SuperPouvoir {
-    protected int extra = 2;
+    int extra = 2;
     double sort();
 }
