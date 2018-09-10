@@ -35,6 +35,13 @@ public abstract class Personnage {
         }
     }
 
+    public String toString(){
+        if (mort()){
+            return nom + " est mort.";
+        }
+        return "Je suis " + nom + " et j'ai " + pdv + " points de vie.";
+    }
+
     public abstract void attaque(Personnage p);
 
     public abstract int subitCharme(int coup);
