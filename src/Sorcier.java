@@ -16,13 +16,17 @@ public class Sorcier extends Personnage {
         return 0;
     }
 
-    public void riposte(Personnage p){
+    public void riposte(Victime p, int coup_initial){
         if (!this.mort()) {
-            p.addVie(-(int)(this.getPouvoir()*pdv));
+            p.subitFrappe((int)(this.getPouvoir()*pdv));
         }
     }
 
     public double getPouvoir(){
         return pouvoir;
+    }
+
+    public void subitFrappe(int coup){
+        pdv -= coup;
     }
 }

@@ -1,17 +1,12 @@
 import java.awt.desktop.OpenURIEvent;
 
-public abstract class Personnage {
+public abstract class Personnage extends Victime {
 
-    protected String nom;
     protected int pdv;
 
     public Personnage(String nom_perso, int vie){
-        nom = nom_perso;
+        super(nom_perso);
         pdv = vie;
-    }
-
-    public String getNom(){
-        return nom;
     }
 
     public int getVie(){
@@ -43,8 +38,4 @@ public abstract class Personnage {
     }
 
     public abstract void attaque(Personnage p);
-
-    public abstract int subitCharme(int coup);
-
-    public abstract void riposte(Personnage p);
 }
