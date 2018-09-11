@@ -1,6 +1,6 @@
 public class NainDeJardin extends Victime {
 
-    private int solidite;
+    protected int solidite;
 
     public NainDeJardin(String nom_nain){
         super(nom_nain);
