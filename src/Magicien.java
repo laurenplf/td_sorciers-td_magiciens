@@ -15,4 +15,5 @@ public class Magicien extends Sorcier implements SuperPouvoir{
     public int subitCharme(int coup) {
         return -(int)(sort()*this.getPouvoir());
     }
+
 }
