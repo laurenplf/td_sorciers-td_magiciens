@@ -1,24 +1,47 @@
 public class Main {
 
     public static void main(String[] args) {
-        Victime persos[] = new Victime[10];
+
+        Victime vict[] = new Victime[10];
+
         for(int i = 0 ; i < 10 ; i++){
-            if (Math.random()*5 == 0){
-                persos[i] = new Sorcier("Sorcier_" + (i+1),
+            int random = (int)(Math.random()*5);
+            if (random == 0){
+                vict[i] = new Sorcier("Sorcier_" + (i+1),
                         50 + (int)(100*Math.random()));
             }
-            else if (Math.random()*5 == 1){
-                persos[i] = new Magicien("Magicien_" + (i+1),
+            else if (random == 1){
+                vict[i] = new Magicien("Magicien_" + (i+1),
                         50 + (int)(100*Math.random()));
             }
-            else if (Math.random()*5 == 2){
-                persos[i] = new NainDeJardin("NainDeJardin_" + (i+1));
+            else if (random == 2){
+                vict[i] = new NainDeJardin("NainDeJardin_" + (i+1));
             }
-            else if (Math.random()*5 == 3){
-                persos[i] = new Gnome("Gnome_" + (i+1));
+            else if (random == 3){
+                vict[i] = new Gnome("Gnome_" + (i+1));
             }
             else{
-                persos[i] = new Monstre("Monstre_" + (i+1),
+                vict[i] = new Monstre("Monstre_" + (i+1),
+                        50 + (int)(100*Math.random()));
+            }
+        }
+
+
+
+        Personnage pers[] = new Personnage[10];
+
+        for (int i = 0 ; i < 10 ; i++){
+            int random = (int)(Math.random()*3);
+            if (random == 0){
+                pers[i] = new Sorcier("Sorcier_" + (i+1),
+                        50 + (int)(100*Math.random()));
+            }
+            else if (random == 1){
+                pers[i] = new Magicien("Magicien_" + (i+1),
+                        50 + (int)(100*Math.random()));
+            }
+            else if (random == 2){
+                pers[i] = new Monstre("Monstre_" + (i+1),
                         50 + (int)(100*Math.random()));
             }
         }
