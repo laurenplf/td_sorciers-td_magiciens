@@ -45,5 +45,13 @@ public class Main {
                         50 + (int)(100*Math.random()));
             }
         }
+
+        for (Personnage p : pers){
+            int indice = (int)(Math.random()*10);
+            p.affiche();
+            p.attaque(vict[indice]);
+            p.affiche();
+            System.out.println("\n");
+        }
     }
 }

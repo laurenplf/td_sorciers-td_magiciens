@@ -15,4 +15,6 @@ public abstract class Victime {
     public abstract void riposte(Victime p, int coup_initial);
 
     public abstract void subitFrappe(int coup);
+
+    public abstract boolean mort();
 }

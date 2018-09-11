@@ -6,7 +6,7 @@ public class Sorcier extends Personnage {
         super(nom_sorcier, vie);
     }
 
-    public void attaque(Personnage p){
+    public void attaque(Victime p){
         if (!p.mort()){
             this.addVie(p.subitCharme((int)(this.getPouvoir()*pdv)));
         }

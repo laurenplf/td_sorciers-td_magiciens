@@ -4,7 +4,7 @@ public class Monstre extends Personnage{
         super(nom_monstre, vie);
     }
 
-    public void attaque(Personnage p){
+    public void attaque(Victime p){
         if (!this.mort()){
             int coup = pdv/2;
             p.subitFrappe(coup);

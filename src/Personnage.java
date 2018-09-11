@@ -37,5 +37,5 @@ public abstract class Personnage extends Victime {
         return "Je suis " + nom + " et j'ai " + pdv + " points de vie.";
     }
 
-    public abstract void attaque(Personnage p);
+    public abstract void attaque(Victime p);
 }
