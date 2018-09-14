@@ -6,6 +6,10 @@ public abstract class Victime {
         nom = nom_victime;
     }
 
+    public void affiche_riposte(Victime p){
+        System.out.println(nom + " riposte sur " + p.nom + ".");
+    }
+
     public String getNom(){
         return nom;
     }
@@ -17,4 +21,6 @@ public abstract class Victime {
     public abstract void subitFrappe(int coup);
 
     public abstract boolean mort();
+
+    public abstract void affiche();
 }

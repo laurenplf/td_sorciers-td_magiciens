@@ -48,9 +48,7 @@ public class Main {
 
         for (Personnage p : pers){
             int indice = (int)(Math.random()*10);
-            p.affiche();
             p.attaque(vict[indice]);
-            p.affiche();
             System.out.println("\n");
         }
     }

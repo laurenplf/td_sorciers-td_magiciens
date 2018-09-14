@@ -37,5 +37,13 @@ public abstract class Personnage extends Victime {
         return "Je suis " + nom + " et j'ai " + pdv + " points de vie.";
     }
 
+    public void affiche_non_riposte(Victime p){
+        System.out.println(nom + " ne riposte pas pas sur " + p.nom + " car " + nom + " est mort.");
+    }
+
+    public void affiche_attaque(Victime p){
+        System.out.println(nom + " (" + pdv + " points de vie) attaque " + p.nom + ".");
+    }
+
     public abstract void attaque(Victime p);
 }

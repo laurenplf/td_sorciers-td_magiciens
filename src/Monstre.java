@@ -6,6 +6,7 @@ public class Monstre extends Personnage{
 
     public void attaque(Victime p){
         if (!this.mort()){
+            this.affiche_attaque(p);
             int coup = pdv/2;
             p.subitFrappe(coup);
             p.riposte(this, coup);
@@ -14,7 +15,11 @@ public class Monstre extends Personnage{
 
     public void riposte(Victime p, int coup_initial){
         if (!this.mort()){
+            this.affiche_riposte(p);
             p.subitFrappe(pdv / 2);
+        }
+        else{
+            this.affiche_non_riposte(p);
         }
     }
 

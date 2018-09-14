@@ -8,6 +8,7 @@ public class Sorcier extends Personnage {
 
     public void attaque(Victime p){
         if (!p.mort()){
+            this.affiche_attaque(p);
             this.addVie(p.subitCharme((int)(this.getPouvoir()*pdv)));
         }
     }
@@ -18,7 +19,11 @@ public class Sorcier extends Personnage {
 
     public void riposte(Victime p, int coup_initial){
         if (!this.mort()) {
+            this.affiche_riposte(p);
             p.subitFrappe((int)(this.getPouvoir()*pdv));
+        }
+        else{
+            this.affiche_non_riposte(p);
         }
     }
 

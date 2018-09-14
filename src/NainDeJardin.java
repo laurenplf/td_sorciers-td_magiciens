@@ -11,6 +11,15 @@ public class NainDeJardin extends Victime {
         return (solidite == 0);
     }
 
+    public void affiche(){
+        if (this.mort()){
+            System.out.println(nom  + " est cassé.");
+        }
+        else{
+            System.out.println("Je suis " + nom + " et j'ai une solidité de " + solidite + ".");
+        }
+    }
+
     public void subitFrappe(int coup){
         if (coup > solidite){
             solidite = 0;
@@ -18,6 +27,7 @@ public class NainDeJardin extends Victime {
     }
 
     public void riposte(Victime p, int coup_initial){
+        this.affiche_riposte(p);
         if (this.mort()){
             p.subitFrappe(solidite);
         }
