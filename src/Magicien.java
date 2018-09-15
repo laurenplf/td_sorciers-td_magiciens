@@ -13,6 +13,11 @@ public class Magicien extends Sorcier implements SuperPouvoir{
     }
 
     public int subitCharme(int coup) {
+        this.addVie(0);
         return -(int)(sort()*this.getPouvoir());
+    }
+
+    public void printAttributs(){
+        System.out.print("(Magicien avec " + pdv + " points de vie et pouvoir de " + this.getPouvoir() + ")");
     }
 }

@@ -11,6 +11,9 @@ public class Monstre extends Personnage{
             p.subitFrappe(coup);
             p.riposte(this, coup);
         }
+        else{
+            System.out.println(p.nom + "est mort ou cassé.");
+        }
     }
 
     public void riposte(Victime p, int coup_initial){
@@ -24,7 +27,7 @@ public class Monstre extends Personnage{
     }
 
     public int subitCharme(int coup){
-        pdv -= coup;
+        this.addVie(-coup);
         if (this.mort()){
             return 0;
         }
@@ -32,6 +35,10 @@ public class Monstre extends Personnage{
     }
 
     public void subitFrappe(int coup){
-        pdv -= coup;
+        this.addVie(-coup);
+    }
+
+    public void printAttributs() {
+        System.out.print("(Monstre avec " + pdv + " points de vie)");
     }
 }

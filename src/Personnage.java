@@ -19,6 +19,15 @@ public abstract class Personnage extends Victime {
 
     public void addVie(int vie){
         pdv += vie;
+        if (vie > 0){
+            System.out.println(nom + " gagne " + vie  + " points de vie.");
+        }
+        else if (vie < 0){
+            System.out.println(nom + " subit " + (-vie) + " points de dégâts.");
+        }
+        else{
+            System.out.println("La vie de " + nom + " reste inchangée.");
+        }
     }
 
     public void affiche(){
@@ -42,7 +51,11 @@ public abstract class Personnage extends Victime {
     }
 
     public void affiche_attaque(Victime p){
-        System.out.println(nom + " (" + pdv + " points de vie) attaque " + p.nom + ".");
+        System.out.print(nom + " ");
+        this.printAttributs();
+        System.out.print(" attaque " + p.nom + " ");
+        p.printAttributs();
+        System.out.println(".");
     }
 
     public abstract void attaque(Victime p);

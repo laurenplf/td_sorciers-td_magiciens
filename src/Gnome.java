@@ -17,4 +17,8 @@ public class Gnome extends NainDeJardin implements SuperPouvoir {
              return -1;
          }
     }
+
+    public void printAttributs(){
+        System.out.print("(Gnome avec " + solidite + " points de solidité)");
+    }
 }

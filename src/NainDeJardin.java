@@ -23,6 +23,7 @@ public class NainDeJardin extends Victime {
     public void subitFrappe(int coup){
         if (coup > solidite){
             solidite = 0;
+            System.out.println(nom + " est cassé.");
         }
     }
 
@@ -38,5 +39,9 @@ public class NainDeJardin extends Victime {
 
     public int subitCharme(int coup){
         return -1;
+    }
+
+    public void printAttributs(){
+        System.out.print("(NainDeJardin avec " + solidite + " points de solidité)");
     }
 }

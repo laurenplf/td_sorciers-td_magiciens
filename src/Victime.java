@@ -23,4 +23,6 @@ public abstract class Victime {
     public abstract boolean mort();
 
     public abstract void affiche();
+
+    public abstract void printAttributs();
 }
