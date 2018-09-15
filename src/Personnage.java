@@ -1,5 +1,3 @@
-import java.awt.desktop.OpenURIEvent;
-
 public abstract class Personnage extends Victime {
 
     protected int pdv;
