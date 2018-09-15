@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tp_sorciers.iml" filepath="$PROJECT_DIR$/tp_sorciers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/td_sorciers-td_magiciens.iml" filepath="$PROJECT_DIR$/td_sorciers-td_magiciens.iml" />
     </modules>
   </component>
 </project>
