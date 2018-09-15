@@ -60,5 +60,5 @@ Réalisation des deux TD suivants :
 
 * Création d'une liste de 10 Personnages qui auront le rôle d'attaquants (type aléatoire)
 * Création d'une liste de 10 Victimes qui auront le rôle de victimes (type aléatoire)
-* Affichage de chaque combat (deux adversaires, un attaque, l'autre subit et riposte éventuellement) avec affichage des caractéristiques de chaque protagoniste et des modifications de points de vie
+* Affichage de chaque combat (deux adversaires, l'un attaque, l'autre subit et riposte éventuellement) avec affichage des caractéristiques de chaque protagoniste et des modifications de points de vie
 
