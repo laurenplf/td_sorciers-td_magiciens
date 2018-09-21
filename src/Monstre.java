@@ -4,6 +4,11 @@ public class Monstre extends Personnage{
         super(nom_monstre, vie);
     }
 
+    /** Makes the Monstre attack the considered Victime
+     *
+     * @param p
+     */
+    @Override
     public void attaque(Victime p){
         if (!this.mort()){
             this.affiche_attaque(p);
@@ -16,6 +21,12 @@ public class Monstre extends Personnage{
         }
     }
 
+    /** Makes the Monstre counterattack its opponent
+     *
+     * @param p
+     * @param coup_initial
+     */
+    @Override
     public void riposte(Victime p, int coup_initial){
         if (!this.mort()){
             this.affiche_riposte(p);
@@ -26,6 +37,12 @@ public class Monstre extends Personnage{
         }
     }
 
+    /** The Monstre receives a charm attack
+     *
+     * @param coup
+     * @return Life which will be added to life of the attacker
+     */
+    @Override
     public int subitCharme(int coup){
         this.addVie(-coup);
         if (this.mort()){
@@ -34,10 +51,19 @@ public class Monstre extends Personnage{
         return pdv/2;
     }
 
+    /** The Monstre receives a physical attack
+     *
+     * @param coup
+     */
+    @Override
     public void subitFrappe(int coup){
         this.addVie(-coup);
     }
 
+    /** Prints information on the considered Monstre
+     *
+     */
+    @Override
     public void printAttributs() {
         System.out.print("(Monstre avec " + pdv + " points de vie)");
     }
